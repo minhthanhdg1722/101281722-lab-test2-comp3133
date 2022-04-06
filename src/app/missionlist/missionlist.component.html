@@ -1,0 +1,11 @@
+<div>
+    <h1>SpaceX Mission Launch List</h1>
+    <div *ngFor="let mission of missionList">
+        <a routerLink="/{{ mission.flight_number }}">
+            <img src="{{ mission.links.mission_patch_small }}" />
+            <h2>{{ mission.mission_name }}</h2>
+            <p>{{ mission.launch_year }}</p>
+            <p>{{ mission.details }}</p>
+        </a>
+    </div>
+</div>
